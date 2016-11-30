@@ -11,15 +11,19 @@
         "siteLocation": {
             "type": "string"
         },
-        "sku": {
+        "skuName": {
             "type": "string",
             "allowedValues": [
                 "S1",
                 "B1",
                 "P1"
             ],
-            "defaultValue": "B1"
-        },       
+            "defaultValue": "S1"
+        },     
+        "skuCapacity": {
+            "type": "int",
+            "defaultValue": 7
+        }, 
         "repoUrl": {
             "type": "string"
         },
@@ -34,8 +38,13 @@
         "type": "Microsoft.Web/serverFarms",
         "location": "[parameters('siteLocation')]",
         "properties": {
-            "sku": "[parameters('sku')]",
-            "numberOfWorkers": 5,
+            "sku": {
+                "name": "[parameters('skuName')]",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": "[parameters('skuCapacity')]"
+            },
             "perSiteScaling": true
         }
     }, 
