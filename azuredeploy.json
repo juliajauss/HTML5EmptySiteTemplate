@@ -14,12 +14,11 @@
         "sku": {
             "type": "string",
             "allowedValues": [
-                "Free",
-                "Shared",
-                "Basic",
-                "Standard"
+                "S1",
+                "B1",
+                "P1"
             ],
-            "defaultValue": "Free"
+            "defaultValue": "B1"
         },
         "workerSize": {
             "type": "string",
@@ -44,7 +43,9 @@
         "type": "Microsoft.Web/serverFarms",
         "location": "[parameters('siteLocation')]",
         "properties": {
-            "sku": "[parameters('sku')]",
+            "sku": {
+                "name": "[parameters('sku')]"
+            },
             "workerSize": "[parameters('workerSize')]",
             "numberOfWorkers": 5,
             "perSiteScaling": true
