@@ -10,16 +10,7 @@
         },
         "siteLocation": {
             "type": "string"
-        },
-        "skuName": {
-            "type": "string",
-            "allowedValues": [
-                "S1",
-                "B1",
-                "P1"
-            ],
-            "defaultValue": "S1"
-        },     
+        },   
         "skuCapacity": {
             "type": "int",
             "defaultValue": 7
