@@ -17,8 +17,7 @@
                 "Free",
                 "Shared",
                 "Basic",
-                "Standard",
-                "Premium"
+                "Standard"
             ],
             "defaultValue": "Free"
         },
