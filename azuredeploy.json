@@ -63,7 +63,8 @@
             "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "empty"
         },
         "properties": {
-            "serverFarmId": "[parameters('hostingPlanName')]"
+            "serverFarmId": "[parameters('hostingPlanName')]",
+            "numberOfWorkers": "3" 
         },
         "resources": [{
             "apiVersion": "2015-08-01",
@@ -75,7 +76,6 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
-                "properties": { "numberOfWorkers": "3" },
                 "IsManualIntegration": true
             }
         }]
