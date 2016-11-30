@@ -63,6 +63,7 @@
             "siteConfig": {
               "appSettings": []
             },
+            "perSiteScaling": true
         },
         "resources": [{
             "apiVersion": "2015-08-01",
