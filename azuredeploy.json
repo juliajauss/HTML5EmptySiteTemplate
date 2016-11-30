@@ -38,17 +38,21 @@
         }
     },
     "resources": [{
-        "apiVersion": "2015-04-01",
+        "comments": "App Service Plan with perSiteScaling",
+        "apiVersion": "2015-08-01",
         "name": "[parameters('hostingPlanName')]",
         "type": "Microsoft.Web/serverFarms",
         "location": "[parameters('siteLocation')]",
         "properties": {
             "sku": "[parameters('sku')]",
             "workerSize": "[parameters('workerSize')]",
-            "numberOfWorkers": 1
+            "numberOfWorkers": 5,
+            "perSiteScaling": true
         }
-    }, {
-        "apiVersion": "2015-08-01",
+    }, 
+    {
+        "comments": "App",
+        "apiVersion": "2015-08-01-preview",
         "name": "[parameters('siteName')]",
         "type": "Microsoft.Web/Sites",
         "location": "[parameters('siteLocation')]",
@@ -59,11 +63,7 @@
             "[concat('hidden-related:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]": "empty"
         },
         "properties": {
-            "serverFarmId": "[parameters('hostingPlanName')]",
-            "siteConfig": {
-              "appSettings": []
-            },
-            "perSiteScaling": true
+            "serverFarmId": "[parameters('hostingPlanName')]"
         },
         "resources": [{
             "apiVersion": "2015-08-01",
@@ -75,7 +75,7 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
-                "properties": { "numberOfWorkers": "1" },
+                "properties": { "numberOfWorkers": "3" },
                 "IsManualIntegration": true
             }
         }]
