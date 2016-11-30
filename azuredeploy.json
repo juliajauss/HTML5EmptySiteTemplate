@@ -28,14 +28,14 @@
         "name": "[parameters('hostingPlanName')]",
         "type": "Microsoft.Web/serverFarms",
         "location": "[parameters('siteLocation')]",
-        "properties": {
-            "sku": {
+        "sku": {
                 "name": "S1",
                 "tier": "Standard",
                 "size": "S1",
                 "family": "S",
                 "capacity": "[parameters('skuCapacity')]"
-            },
+        },
+        "properties": {
             "perSiteScaling": true
         }
     }, 
