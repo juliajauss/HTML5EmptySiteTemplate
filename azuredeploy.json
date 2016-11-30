@@ -35,7 +35,6 @@
         "location": "[parameters('siteLocation')]",
         "properties": {
             "sku": "[parameters('sku')]",
-            "workerSize": "[parameters('workerSize')]",
             "numberOfWorkers": 5,
             "perSiteScaling": true
         }
