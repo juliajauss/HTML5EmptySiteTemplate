@@ -74,6 +74,7 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
+                "properties": { "numberOfWorkers": "1" },
                 "IsManualIntegration": true
             }
         }]
