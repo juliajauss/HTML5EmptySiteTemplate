@@ -45,7 +45,7 @@
         "properties": {
             "sku": "[parameters('sku')]",
             "workerSize": "[parameters('workerSize')]",
-            "numberOfWorkers": 3
+            "numberOfWorkers": 1
         }
     }, {
         "apiVersion": "2015-08-01",
@@ -74,7 +74,6 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
-                "properties": { "numberOfWorkers": "2"},
                 "IsManualIntegration": true
             }
         }]
