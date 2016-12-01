@@ -13,6 +13,9 @@
     },
     "branch": {
       "value": "master"
-    }
+    },
+	"skuCapacity":{
+      "value": "4"
+	}
   }
 }
