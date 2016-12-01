@@ -26,10 +26,10 @@
         "type": "Microsoft.Web/serverFarms",
         "location": "North Europe",
         "sku": {
-                "name": "S1",
-                "tier": "Standard",
-                "size": "S1",
-                "family": "S",
+                "name": "P1",
+                "tier": "Premium",
+                "size": "P1",
+                "family": "P",
                 "capacity": "[parameters('skuCapacity')]"
         },
         "properties": {
