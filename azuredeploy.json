@@ -69,7 +69,9 @@
             },
 			"resources": [{
 				"type": "config",
-				"numberOfWorkers": "[parameters('numberOfWorkers')]"
+				"name": "web",
+                "apiVersion": "2015-08-01",
+				"properties": { "numberOfWorkers": "[parameters('numberOfWorkers')]" }
 			}]
         }]
     }]
