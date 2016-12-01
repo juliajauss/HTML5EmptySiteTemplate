@@ -17,7 +17,10 @@
         },
         "branch": {
             "type": "string"
-        }
+        },
+		"numberOfWorkers":{
+		    "type": "int"
+		}
     },
     "resources": [{
         "comments": "App Service Plan with perSiteScaling",
@@ -62,7 +65,7 @@
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
                 "IsManualIntegration": true,
-				"numberOfWorkers": 2
+				"numberOfWorkers": "[parameters('numberOfWorkers')]"
             }
         }]
     }]

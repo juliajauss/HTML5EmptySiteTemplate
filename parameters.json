@@ -15,7 +15,10 @@
       "value": "master"
     },
 	"skuCapacity":{
-      "value": 5
+      "value": 3
+	},
+	"numberOfWorkers":{
+	   "value": 1
 	}
   }
 }
