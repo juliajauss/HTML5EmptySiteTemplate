@@ -70,9 +70,12 @@
         },
         {
           "type": "config",
-          "name":  "instanceSize",
+          "name": "instanceSize",
           "apiVersion": "2015-08-01",
           "location": "North Europe",
+          "dependsOn": [
+            "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
+          ],
           "properties": {
             "numberOfWorkers": "[parameters('numberOfWorkers')]"
           }
