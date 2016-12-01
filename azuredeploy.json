@@ -72,7 +72,6 @@
           "resources": [
             {
               "type": "config",
-              "name": "web",
               "apiVersion": "2015-08-01",
               "location": "North Europe",
 
