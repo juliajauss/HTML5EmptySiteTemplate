@@ -64,9 +64,13 @@
             "properties": {
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
-                "IsManualIntegration": true,
+                "IsManualIntegration": true
+				
+            },
+			"resources": [{
+				"type": "config",
 				"numberOfWorkers": "[parameters('numberOfWorkers')]"
-            }
+			}]
         }]
     }]
 }
