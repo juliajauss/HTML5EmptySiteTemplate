@@ -58,8 +58,9 @@
             "dependsOn": [
                 "[resourceId('Microsoft.Web/Sites', parameters('siteName'))]"
             ],
+			"numberOfWorkers": "3",
             "properties": {
-                "numberOfWorkers": "3",
+                
                 "RepoUrl": "[parameters('repoUrl')]",
                 "branch": "[parameters('branch')]",
                 "IsManualIntegration": true
